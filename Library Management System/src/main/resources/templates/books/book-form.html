@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" th:href="@{/style.css}">
+
+    <title>Alexandria | Book Directory</title>
+</head>
+
+<body class="gradient-custom-3">
+
+<div class="container">
+
+    <h3 style="margin-top: 2%;">Book Directory</h3>
+    <hr>
+
+    <p class="h4 mb-4">Save Book</p>
+
+    <form action="#" th:action="@{/books/save}"
+          th:object="${book}" method="POST">
+
+        <!-- Add hidden form field to handle update -->
+        <input type="hidden" th:field="*{id}" />
+
+        <input type="text" th:field="*{title}"
+               class="form-control mb-4 w-25" placeholder="Title" required="required">
+
+        <input type="text" th:field="*{author}"
+               class="form-control mb-4 w-25" placeholder="Author" required="required">
+
+        <input type="text" th:field="*{ISBN}"
+               class="form-control mb-4 w-25" placeholder="ISBN" required="required">
+
+        <select th:field="*{status}" class="form-control mb-4 w-25" required="required">
+            <option value="Available">Available</option>
+            <option value="Unavailable">Unavailable</option>
+        </select>
+
+        <button type="submit" class="btn gradient-custom-5 col-2">Save</button>
+
+    </form>
+
+    <hr>
+
+    <div style="display: flex;">
+        <a th:href="@{/books/list}" class="btn gradient-custom-4 btn-sm mb-3" style="margin-right: 1%;">
+            Back to Books List
+        </a>
+
+        <form action="#" th:action="@{/logout}" method="POST">
+            <input type="submit" class="btn gradient-custom-4 btn-sm mb-3" value="Logout" />
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>

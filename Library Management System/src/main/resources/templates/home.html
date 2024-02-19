@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" th:href="@{/style.css}">
+
+    <title>Alexandria | Home</title>
+</head>
+
+<body class="container mt-5 gradient-custom-3">
+
+<div class="text-center">
+
+    <div style="margin-bottom: 2%; border-radius: 5px; overflow: hidden; box-shadow: 8px 16px 32px rgba(0, 0, 0, 0.5);">
+        <img alt="Alexandria" th:src="@{img/ancient-library.png}" class="img-fluid" style="width: 100%; max-height: 425px; border-radius: 5px;"/>
+    </div>
+
+    <h1 class="bold">Welcome to the Alexandria Library Management System</h1>
+
+    <p class="lead">
+        This Application is used to manage a directory of books stored at the library.
+        All books are ordered by title and include their author, ISBN and status.
+    </p>
+
+    <p class="lead">
+        Only those with Admin authorization will be able to modify the directory.
+    </p>
+
+    <br><br>
+
+    <p>
+        Select the button directly below to access the directory
+    </p>
+
+    <a th:href="@{/books/list}" class="btn gradient-custom-4 btn-sm mb-3">
+        Book Directory
+    </a>
+
+</div>
+
+<hr>
+<!-- display username and authorization -->
+<p>
+    User:
+    <span sec:authentication="principal.username"></span>
+    <br><br>
+    Authorization:
+    <span th:if="${#authorization.expression('hasRole(''ROLE_ADMIN'')')}" >
+        ADMIN
+    </span>
+    <span th:unless="${#authorization.expression('hasRole(''ROLE_ADMIN'')')}">
+        USER
+    </span>
+</p>
+<hr>
+
+<!-- Add a logout button -->
+<form action="#" th:action="@{/logout}" method="POST">
+
+    <input type="submit" class="btn gradient-custom-4 btn-sm mb-3" value="Logout" />
+</form>
+
+<!-- Bootstrap JS (optional, if you need Bootstrap JavaScript features) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-EKJ3L5qRd4FyZbYkTPXHr8vDwi8TkqruI5eKYCv9Wt+1A/jszjrL3UJFZd+2O6zW" crossorigin="anonymous"></script>
+</body>
+
+</html>
