@@ -1,0 +1,16 @@
+# Ignore Maven build output
+/target
+
+# Ignore Git files
+.git
+.gitignore
+
+# Ignore IDE/project files
+*.iml
+.idea/
+*.log
+
+# Ignore Docker-related files not needed in image
+Dockerfile
+docker-compose.yml
+README.md
