@@ -31,3 +31,8 @@ build/
 
 ### VS Code ###
 .vscode/
+
+.env
+# Ignore application.properties for local secrets
+backend/src/main/resources/application.properties
+
