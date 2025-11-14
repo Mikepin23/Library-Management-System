@@ -1,14 +1,13 @@
-# Use a Java runtime as a parent image
-FROM eclipse-temurin:21-jdk-alpine
 
-# Set the working directory
+# ---- Build Stage ----
+FROM eclipse-temurin:21-jdk-alpine AS build
 WORKDIR /app
+COPY . .
+RUN ./mvnw clean package -DskipTests
 
-# Copy the built jar (will be provided by Maven build)
-COPY target/*.jar app.jar
-
-# Expose port 8080
+# ---- Run Stage ----
+FROM eclipse-temurin:21-jdk-alpine
+WORKDIR /app
+COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
-
-# Run the application (the entrypoint is overridden by docker-compose for wait-for-it)
 ENTRYPOINT ["java", "-jar", "app.jar"]
