@@ -1,5 +1,5 @@
-# Ignore Maven build output
-/target
+# # Ignore Maven build output
+# /target
 
 # Ignore Git files
 .git
