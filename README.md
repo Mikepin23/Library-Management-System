@@ -39,6 +39,7 @@
 The Library Management System is a simple web application for managing books and their availability. Built with Java and Spring Boot, it offers a basic, user-friendly interface for library staff and patrons. This project is a learning exercise in backend development, security, and web design using the Spring ecosystem.
 
 **Login Credentials:**
+
 - Admin: `admin` / `adminpass`
 - User: `user` / `userpass`
 
@@ -85,26 +86,26 @@ Use these credentials to sign in and explore the application's features based on
 
 ---
 
-<!-- Screenshots: GitHub-safe layout using width/height attributes only -->
+<!-- Screenshots -->
 
-<p align="center">
-  <span style="display:inline-block; text-align:center; margin:0 10px;">
-    <b>Home Page</b><br/>
-    <img src="images/lms.png" alt="Home Page" width="350" height="300"/>
-  </span>
-  <span style="display:inline-block; text-align:center; margin:0 10px;">
-    <b>Book Directory</b><br/>
-    <img src="images/book-directory.png" alt="Book Directory" width="350" height="300"/>
-  </span>
-  <span style="display:inline-block; text-align:center; margin:0 10px;">
-    <b>Add Book</b><br/>
-    <img src="images/add-book.png" alt="Add Book" width="350" height="300"/>
-  </span>
-  <span style="display:inline-block; text-align:center; margin:0 10px;">
-    <b>Access Denied</b><br/>
-    <img src="images/access-denied.png" alt="Access Denied" width="350" height="300"/>
-  </span>
-</p>
+<table align="center">
+  <tr>
+    <td align="center"><b>Home Page</b><br/>
+      <img src="images/lms.png" alt="Home Page" width="350" height="300"/>
+    </td>
+    <td align="center"><b>Book Directory</b><br/>
+      <img src="images/book-directory.png" alt="Book Directory" width="350" height="300"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><b>Add Book</b><br/>
+      <img src="images/add-book.png" alt="Add Book" width="350" height="300"/>
+    </td>
+    <td align="center"><b>Access Denied</b><br/>
+      <img src="images/access-denied.png" alt="Access Denied" width="350" height="300"/>
+    </td>
+  </tr>
+</table>
 
 ---
 
