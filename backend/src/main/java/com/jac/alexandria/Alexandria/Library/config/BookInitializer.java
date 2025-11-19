@@ -22,11 +22,11 @@ public class BookInitializer implements CommandLineRunner {
                 new Book("Harry Potter and the Sorcerer's Stone", "J.K. Rowling", "978-0439708180", "Available"),
                 new Book("Harry Potter and the Chamber of Secrets", "J.K. Rowling", "978-0439064873", "Available"),
                 new Book("The Hobbit", "J.R.R. Tolkien", "978-0547928227", "Available"),
-                new Book("The Lord of the Rings", "J.R.R. Tolkien", "978-0618640157", "Available"),
+                new Book("The Lord of the Rings", "J.R.R. Tolkien", "978-0618640157", "Unavailable"),
                 new Book("To Kill a Mockingbird", "Harper Lee", "978-0061120084", "Available"),
                 new Book("1984", "George Orwell", "978-0451524935", "Available"),
                 new Book("Pride and Prejudice", "Jane Austen", "978-1503290563", "Available"),
-                new Book("The Great Gatsby", "F. Scott Fitzgerald", "978-0743273565", "Available"),
+                new Book("The Great Gatsby", "F. Scott Fitzgerald", "978-0743273565", "Unavailable"),
                 new Book("Moby Dick", "Herman Melville", "978-1503280786", "Available"),
                 new Book("The Catcher in the Rye", "J.D. Salinger", "978-0316769488", "Available")
             };
