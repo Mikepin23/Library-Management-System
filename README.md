@@ -109,7 +109,7 @@ Use these credentials to sign in and explore the application's features based on
 
 ---
 
-## 🚢 Deployment
+## 💻 Try It Yourself
 
 This project is live:
 
